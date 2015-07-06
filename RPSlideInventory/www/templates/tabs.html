@@ -1,0 +1,18 @@
+<!--
+Create tabs with an icon and label, using the tabs-stable style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-stable">
+
+    <!-- Dashboard Tab -->
+    
+  <ion-tab title="Outgoing" icon-off="ion-arrow-up-c" icon-on="ion-arrow-up-a" href="#/tab/scanout">
+    <ion-nav-view name="tab-scanout"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Scan Tab -->
+  <ion-tab title="Incoming" icon-off="ion-arrow-down-c" icon-on="ion-arrow-down-a" href="#/tab/scanin">
+    <ion-nav-view name="tab-scanin"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

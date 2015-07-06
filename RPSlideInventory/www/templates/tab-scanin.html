@@ -1,0 +1,24 @@
+<ion-view view-title="SCAN IN">
+    <ion-content>
+
+        <br/>
+        <div class="bar bar-header bar-calm" ng-hide="hide">
+        <div class="title"><span ng-bind="remaining" ></span></div>
+            </div>
+            <br />
+            <button class="button button-full button-positive bigerText" ng-click="scanBarcode()">Click To Scan</button>
+        <div>
+                <button class="button button-calm" ng-click="checkAll()" ng-hide="hide">Check All</button>
+        <button class="button button-calm button-right" ng-click="saveAll(devList)" ng-hide="hide">Save</button>
+            </div>
+        <br/>
+        <div class="list">
+            <ion-checkbox ng-repeat="item in devList | orderBy:'SlideNumber'"
+                          ng-model="item.Checked"
+                          ng-checked="checked">
+                {{ item.SlideNumber }}
+            </ion-checkbox>
+        </div>
+
+</ion-content>
+</ion-view>
